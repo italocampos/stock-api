@@ -4,9 +4,10 @@ A project using Spring Boot, Hibernate, and other technologies to improve my
 portifolio.
 
 This project implements a CRUD API using the RESTful concepts and the MVC
-archtecture. The application provides endpoints to handle the CRUD operations
-with Stock objects. Each Stock has a unique name and a list of quotes. See the
-examples below to better understand the actions of this application.
+architecture. The application provides endpoints to handle the CRUD
+operations with Stock objects. Each Stock has a unique name and a list of
+quotes. See the examples below to better understand the actions of this
+application.
 
 ## Enabling a database
 
@@ -14,10 +15,10 @@ To run the project, install and run MySQL in your PC. After, logged as root,
 run the script placed in `auxiliary/db_scripts.sql`. If all is right, you can
 now compile and run the application.
 
-## Compiling and runing
+## Compiling and running
 
-With Maven installed on your PC, go to the root of the project and run the
-`mvn package` command, like this.
+With Maven installed on your PC, go to the root folder of the project and run
+the `mvn package` command, like this.
 
 ``` shell
 cd stock-api
@@ -55,4 +56,4 @@ Content-Type: application/json
 
 You can use clients like [Postman](https://www.postman.com/) or REST Client
 in [VS Code](https://code.visualstudio.com/) to test this API. To more
-examples of test, see the `auxiliary/uri_tests.rest` file.
+examples and tests, see the `auxiliary/uri_tests.rest` file.
