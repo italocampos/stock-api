@@ -8,7 +8,7 @@ import javax.persistence.Id;
 /** This class creates a model of a Stock. The objects of this classes will be
  * added in the database by means of the annotations from JPA library. This lib
  * maps each object in a table.
- * @author @italocampos   
+ * @author @italocampos
  */
 @Entity
 public class Stock {
@@ -18,10 +18,12 @@ public class Stock {
 
     public Stock(String name, ArrayList<Float> quotes) {
         this.name = name;
-        this.quotes = quotes;
+        this.quotes = quotes != null ? quotes : new ArrayList<Float>();
     }
 
     public Stock() {
+        this.name = null;
+        this.quotes = new ArrayList<Float>();
     }
 
     /** Returns the name of the Stock's objects.
@@ -47,10 +49,18 @@ public class Stock {
     }
 
     /** Sets the quotes for the Stock's objects.
-     * @param quotes : a ArrayList with the quotes of the Stock's object.
+     * @param quotes : an ArrayList with the quotes of the Stock's object.
      */
     public void setQuotes(ArrayList<Float> quotes) {
         this.quotes = quotes;
+    }
+
+    /** Adds new quotes to the quotes attribute.
+     * @param quotes : an ArrayList with the new quotes to be added in the
+     * this.quotes list.
+     */
+    public void addQuotes(ArrayList<Float> quotes) {
+        this.quotes.addAll(quotes);
     }
 
     @Override
