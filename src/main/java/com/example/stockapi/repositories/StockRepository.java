@@ -2,7 +2,6 @@ package com.example.stockapi.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 import com.example.stockapi.models.Stock;
 
 /** This interface will provide the most common methods to be used in REST
@@ -13,6 +12,4 @@ import com.example.stockapi.models.Stock;
  * @author @italocampos
  */
 @Repository
-public interface StockRepository extends JpaRepository<Stock, String> {
-    
-}
+public interface StockRepository extends JpaRepository<Stock, String> { }

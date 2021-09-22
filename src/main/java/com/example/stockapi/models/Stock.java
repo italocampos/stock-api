@@ -1,7 +1,6 @@
 package com.example.stockapi.models;
 
 import java.util.ArrayList;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -16,6 +15,7 @@ public class Stock {
     private String name;
     private ArrayList<Float> quotes;
 
+    // It seems that this builder is never used
     public Stock(String name, ArrayList<Float> quotes) {
         this.name = name;
         this.quotes = quotes != null ? quotes : new ArrayList<Float>();

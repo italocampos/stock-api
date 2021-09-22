@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.example.stockapi.models.Stock;
 import com.example.stockapi.repositories.StockRepository;
 
@@ -47,9 +46,6 @@ public class StockController {
     public ResponseEntity<Stock> create(@RequestBody Stock stock) {
         // Setting the stock name to upper case
         stock.setName(stock.getName().toUpperCase());
-        /*if(stock.getQuotes() == null) {
-
-        }*/
         // The line below gets the provided task object and saves it on DB.
         this.repository.save(stock);
         return new ResponseEntity<>(stock, HttpStatus.OK);
@@ -62,7 +58,6 @@ public class StockController {
      * @return ResponseEntity : a HTTP response with the updated object
      * corresponding to the provided name.
      */
-    //@PatchMapping(value = "/{name}")
     @PatchMapping(path = "/{name}")
     public ResponseEntity<Stock> update(@PathVariable String name, @RequestBody Stock updates) {
         return this.repository.findById(name.toUpperCase())
