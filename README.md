@@ -5,8 +5,8 @@ portifolio.
 
 This project implements a CRUD API using the RESTful concepts and the MVC
 architecture. The application provides endpoints to handle the CRUD
-operations with Stock objects. Each Stock has a unique name and a list of
-quotes. See the examples below to better understand the actions of this
+operations with `Stock` objects. Each `Stock` has an unique name and a list
+of quotes. See the examples below to better understand the actions of this
 application.
 
 ## Enabling a database
